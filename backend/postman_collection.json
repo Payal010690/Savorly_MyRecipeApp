@@ -1,0 +1,142 @@
+{
+  "info": {
+    "name": "Recipe App - Full",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Payal\", \"email\": \"payal@example.com\", \"password\": \"password123\"}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/register",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"payal@example.com\", \"password\": \"password123\"}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Recipe",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "type": "text",
+              "value": "Sample Pancakes"
+            },
+            {
+              "key": "description",
+              "type": "text",
+              "value": "Delicious pancakes"
+            },
+            {
+              "key": "ingredients",
+              "type": "text",
+              "value": "[\"flour\",\"milk\",\"egg\"]"
+            },
+            {
+              "key": "steps",
+              "type": "text",
+              "value": "[\"Mix\",\"Cook\"]"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": [
+                "backend/sample_images/pancakes.png"
+              ]
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/recipes",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "recipes"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Feed",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/recipes",
+          "host": [
+            "{{base_url>>?}}"
+          ],
+          "path": [
+            "api",
+            "recipes"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}

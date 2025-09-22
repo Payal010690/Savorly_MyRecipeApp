@@ -1,0 +1,89 @@
+/* /* src/index.css */
+:root{
+  --bg: #f7f7f9;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #0b69ff;
+  --danger: #ef4444;
+  --radius: 10px;
+  --gap: 12px;
+  --shadow: 0 6px 18px rgba(16,24,40,0.06);
+  --container-width: 1100px;
+  --max-width: 1200px;
+}
+
+/* simple reset */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* container */
+.container{
+  width:calc(100% - 32px);
+  max-width:var(--container-width);
+  margin:32px auto;
+}
+
+/* nav */
+.app-nav{
+  background:transparent;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.app-nav .brand{
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+.app-nav .links{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.app-nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:8px 10px;
+  border-radius:8px;
+}
+.app-nav a:hover{
+  background:rgba(11,105,255,0.08);
+  color:var(--accent);
+}
+
+/* buttons */
+.btn {
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid transparent;
+  background:transparent;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn-primary{
+  background:var(--accent);
+  color:white;
+  border-color:transparent;
+  box-shadow: var(--shadow);
+}
+.btn-outline{
+  background:transparent;
+  border:1px solid rgba(16,24,40,0.06);
+}
+
+/* small responsive utility */
+@media (max-width:640px){
+  .container{ width:calc(100% - 24px); margin:16px auto; }
+}

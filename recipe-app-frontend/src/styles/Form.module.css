@@ -1,0 +1,36 @@
+/* src/styles/Form.module.css */
+.form {
+  background:var(--card);
+  padding:16px;
+  border-radius:12px;
+  box-shadow: var(--shadow);
+  max-width:520px;
+  margin:0 auto;
+  border:1px solid rgba(16,24,40,0.04);
+}
+.form h2{ margin-top:0 }
+.field {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-bottom:12px;
+}
+.input, .file {
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(16,24,40,0.08);
+  outline:none;
+  font-size:14px;
+}
+.input:focus{
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(11,105,255,0.08);
+}
+.row{
+  display:flex;
+  gap:8px;
+}
+.helper {
+  font-size:12px;
+  color:var(--muted);
+}

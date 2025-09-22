@@ -1,0 +1,49 @@
+/* src/pages/RecipeDetail.module.css */
+.container {
+  display:block;
+}
+.back {
+  margin-bottom:12px;
+  padding:6px 10px;
+  background:transparent;
+  border:1px solid rgba(16,24,40,0.06);
+  border-radius:8px;
+}
+.header {
+  display:flex;
+  gap:16px;
+  align-items:center;
+  margin-bottom:12px;
+}
+.title {
+  margin:0;
+  font-size:24px;
+}
+.image {
+  width:100%;
+  max-width:700px;
+  border-radius:8px;
+  box-shadow: var(--shadow);
+  margin:12px 0;
+}
+.meta {
+  color:var(--muted);
+  margin-bottom:8px;
+}
+.section {
+  background:var(--card);
+  padding:12px;
+  border-radius:8px;
+  border:1px solid rgba(16,24,40,0.04);
+  box-shadow: var(--shadow);
+  margin-bottom:12px;
+}
+.actions {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-top:8px;
+}
+.likes {
+  font-weight:600;
+}
